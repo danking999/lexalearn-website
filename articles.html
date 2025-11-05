@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V427V4DZ43"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-V427V4DZ43');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning Articles & Guides | Lexa AI</title>
+    <meta name="description" content="Expert articles and guides on language learning, AI tutoring, conversation practice, and effective study techniques. Learn how to master any language.">
+    <meta name="keywords" content="language learning articles, language learning tips, AI language tutor, learn languages">
+    <meta property="og:title" content="Language Learning Articles & Guides | Lexa AI">
+    <meta property="og:description" content="Expert articles and guides on language learning, AI tutoring, and effective study techniques.">
+    <meta property="og:url" content="https://lexalearn.app/articles.html">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/20251013_1530_Matte Black Icon_remix_01k7e7js4hepdsmwsm9g90b7r5 (1) copy-min.png" alt="LexaLearn Logo" class="navbar-icon">
+                <h2><a href="index.html" style="color: inherit; text-decoration: none;">Lexa AI</a></h2>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="articles.html">Articles</a>
+                <a href="terms.html">Terms</a>
+                <a href="privacy.html">Privacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Articles Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h1>Language Learning Articles & Guides</h1>
+                <p>Discover expert tips, strategies, and insights to help you master any language faster and more effectively.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid Section -->
+    <section class="features">
+        <div class="container">
+            <div id="articles-grid" class="features-grid">
+                <!-- Articles will be loaded here dynamically -->
+                <!-- Or you can manually add them after running the script -->
+                
+                <!-- Example article card (this will be generated for each article) -->
+                <div class="feature-card">
+                    <h3><a href="articles/best-language-learning-app.html" style="color: inherit; text-decoration: none;">Best Language Learning App - Complete Guide 2025</a></h3>
+                    <p>Discover the best language learning app in 2025. Compare features, pricing, and effectiveness of top language learning apps including AI-powered solutions.</p>
+                    <a href="articles/best-language-learning-app.html" style="color: #8b5cf6; text-decoration: none; font-weight: 600;">Read More →</a>
+                </div>
+                
+                <!-- Add more article cards here after generating them -->
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-download">
+        <div class="container">
+            <h2 class="section-title">Start Learning Today</h2>
+            <div class="simple-cta">
+                <!-- Tracks clicks via Google Analytics -->
+                <a class="cta-button" href="https://apps.apple.com/us/app/lexa-ai-learn-languages/id6754065379" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Articles Page - Download Lexa AI'});">Download Lexa AI</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lexa AI</h3>
+                    <p>AI-powered language learning through natural conversations.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="articles.html">Articles</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="mailto:hello@lexalearn.app">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lexa AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script to dynamically load articles from JSON data
+        fetch('articles-data.json?v=' + Date.now()) // Add cache buster
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load articles');
+                }
+                return response.json();
+            })
+            .then(articles => {
+                console.log('Loaded ' + articles.length + ' articles'); // Debug log
+                const grid = document.getElementById('articles-grid');
+                
+                if (articles.length === 0) {
+                    grid.innerHTML = '<p style="color: #a0a0a0; text-align: center;">No articles found. Generate articles with: npm run generate</p>';
+                    return;
+                }
+                
+                grid.innerHTML = articles.map(article => `
+                    <div class="feature-card">
+                        <h3><a href="articles/${article.slug}.html" style="color: inherit; text-decoration: none;">${article.title}</a></h3>
+                        <p>${article.description}</p>
+                        <a href="articles/${article.slug}.html" style="color: #8b5cf6; text-decoration: none; font-weight: 600;">Read More →</a>
+                    </div>
+                `).join('');
+            })
+            .catch(error => {
+                console.error('Error loading articles:', error);
+                // Keep the example article card that's already in the HTML
+            });
+    </script>
+</body>
+</html>
+

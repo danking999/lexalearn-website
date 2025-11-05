@@ -1,0 +1,40 @@
+
+> lexalearn-website@1.0.0 generate
+> node auto-generate-articles.js
+
+✓ Folders ready
+
+🚀 Starting automated article generation...
+
+📚 Found 1 Word documents to process
+
+
+--- Processing document 1 of 1 ---
+
+📄 Processing: SEO article with Lexa AI.docx
+  → Extracting text from Word document...
+  → Analyzing document to detect multiple articles...
+  ✓ Detected 1 articles in document
+
+  📝 Article 1/1: "Spanish learning phrases"
+    → Processing article for: "Spanish learning phrases"
+    ✓ Generated: spanish-learning-phrases.html
+    ✓ Title: Essential Spanish Learning Phrases for Travelers and Learners
+
+  ✅ Successfully generated 1 articles from SEO article with Lexa AI.docx
+
+📊 Articles index: 7 existing + 0 new = 7 total
+
+============================================================
+✅ GENERATION COMPLETE!
+============================================================
+✓ Successfully generated: 1 articles
+📊 Articles index saved to: ./articles-data.json
+📁 HTML files saved to: ./articles/
+
+🚀 Next steps:
+   1. Review the generated articles in the /articles folder
+   2. Make any manual edits if needed
+   3. Deploy: git add . && git commit -m "Add articles" && git push
+
+

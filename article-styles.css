@@ -1,0 +1,359 @@
+/* Styling for article pages to make them SEO-friendly and readable */
+
+/* Article container - main wrapper for article content */
+.article-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 80px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 3rem;
+}
+
+/* Main article content area */
+.article-content {
+    background-color: #1a1a1a;
+    padding: 3rem;
+    border-radius: 16px;
+    border: 1px solid #2a2a2a;
+}
+
+/* Article headings */
+.article-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+.article-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.article-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+/* Article paragraphs */
+.article-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d0d0d0;
+    margin-bottom: 1.5rem;
+}
+
+/* Article lists */
+.article-content ul,
+.article-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.article-content li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d0d0d0;
+    margin-bottom: 0.5rem;
+}
+
+/* Article links */
+.article-content a:not(.cta-button) {
+    color: #8b5cf6;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.article-content a:not(.cta-button):hover {
+    border-bottom: 1px solid #8b5cf6;
+}
+
+/* Article tables - styling for phrase tables with increased spacing */
+.article-content table {
+    width: 100%;
+    border-collapse: separate; /* Changed from collapse to separate for better spacing */
+    border-spacing: 0;
+    margin: 2rem 0;
+    background-color: #0a0a0a;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+}
+
+.article-content thead {
+    background-color: #1a1a1a;
+}
+
+.article-content th {
+    padding: 1.25rem 1rem; /* Increased padding for more spacing */
+    text-align: left;
+    font-weight: 600;
+    color: #8b5cf6;
+    font-size: 1rem;
+    border-bottom: 2px solid #2a2a2a;
+}
+
+.article-content td {
+    padding: 1.5rem 1rem; /* Increased padding significantly for more row spacing */
+    color: #d0d0d0;
+    font-size: 1.05rem;
+    border-bottom: 1px solid #1a1a1a; /* Subtle border between rows */
+}
+
+.article-content tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.article-content tbody tr:hover {
+    background-color: #1a1a1a; /* Highlight row on hover */
+}
+
+.article-content tbody tr:last-child td {
+    border-bottom: none; /* Remove border from last row */
+}
+
+/* Responsive table styling for mobile */
+@media (max-width: 768px) {
+    .article-content table {
+        font-size: 0.95rem;
+    }
+    
+    .article-content th,
+    .article-content td {
+        padding: 1rem 0.75rem; /* Slightly reduce padding on mobile */
+    }
+}
+
+/* Article CTA button within content */
+.article-cta {
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: #0a0a0a;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #2a2a2a;
+}
+
+/* Ensure CTA button text is white and properly styled */
+.article-cta .cta-button,
+.article-content .cta-button {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    display: inline-block;
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    padding: 1.25rem 2.5rem;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.article-cta .cta-button:hover,
+.article-content .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(124, 58, 237, 0.5);
+    background: linear-gradient(135deg, #9a6df9 0%, #8448f0 100%);
+    color: #ffffff !important;
+}
+
+/* Sidebar for related content and internal linking */
+.article-sidebar {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid #2a2a2a;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.article-sidebar h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+/* Related articles list */
+.related-articles {
+    list-style: none;
+    padding: 0;
+}
+
+.related-articles li {
+    margin-bottom: 0.75rem;
+}
+
+.related-articles a {
+    color: #d0d0d0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.related-articles a:hover {
+    color: #8b5cf6;
+}
+
+/* Logo link in nav should not have default link styles */
+.nav-logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Responsive design for article pages */
+@media (max-width: 968px) {
+    .article-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .article-sidebar {
+        position: static;
+    }
+    
+    .article-content {
+        padding: 2rem;
+    }
+    
+    .article-content h1 {
+        font-size: 2rem;
+    }
+    
+    .article-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-content {
+        padding: 1.5rem;
+        padding-bottom: 100px; /* Add space for sticky banner */
+    }
+    
+    .article-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .article-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Sticky mobile banner for app download */
+.mobile-download-banner {
+    display: none; /* Hidden by default on desktop */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    padding: 1rem 1.25rem;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.mobile-download-banner .banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.mobile-download-banner .banner-text {
+    flex: 1;
+    color: #ffffff;
+}
+
+.mobile-download-banner .banner-text h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.mobile-download-banner .banner-text p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #e0e0e0;
+    line-height: 1.3;
+}
+
+.mobile-download-banner .banner-button {
+    flex-shrink: 0;
+}
+
+.mobile-download-banner .cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background: #ffffff;
+    color: #7c3aed !important;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-download-banner .cta-button:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-download-banner .close-banner {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #ffffff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    transition: background 0.2s ease;
+}
+
+.mobile-download-banner .close-banner:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Show banner only on mobile/tablet */
+@media (max-width: 768px) {
+    .mobile-download-banner {
+        display: block;
+    }
+    
+    body {
+        padding-bottom: 80px; /* Prevent content from being hidden behind banner */
+    }
+}
+

@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V427V4DZ43"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-V427V4DZ43');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LexaLearn - AI-Powered Language Learning</title>
+    <title>Lexa AI - Learn A Language By Speaking</title>
     <meta name="description" content="Master languages with AI conversations. Practice real conversations, review with flashcards, and learn languages naturally through interactive dialogue.">
     <meta name="keywords" content="language learning, AI tutor, conversation practice, flashcards, language app">
-    <meta property="og:title" content="LexaLearn - AI-Powered Language Learning">
+    <meta property="og:title" content="Lexa AI - Learn A Language By Speaking">
     <meta property="og:description" content="Master languages with AI conversations. Practice real conversations, review with flashcards, and learn languages naturally through interactive dialogue.">
     <meta property="og:url" content="https://lexalearn.app">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LexaLearn - AI-Powered Language Learning">
+    <meta name="twitter:title" content="Lexa AI - Learn A Language By Speaking">
     <meta name="twitter:description" content="Master languages with AI conversations. Practice real conversations, review with flashcards, and learn languages naturally through interactive dialogue.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -22,10 +32,11 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <img src="images/20251013_1530_Matte Black Icon_remix_01k7e7js4hepdsmwsm9g90b7r5 (1) copy-min.png" alt="LexaLearn Logo" class="navbar-icon">
-                <h2>LexaLearn</h2>
+                <h2>Lexa AI</h2>
             </div>
             <div class="nav-links">
                 <a href="#features">Features</a>
+                <a href="articles.html">Articles</a>
                 <a href="terms.html">Terms</a>
                 <a href="privacy.html">Privacy</a>
             </div>
@@ -36,14 +47,25 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Master Languages with AI Conversations</h1>
+                <h1>Learn Any Language By Speaking With An AI Tutor</h1>
                 <p>Practice real conversations with AI, review with flashcards, and learn languages naturally through interactive dialogue.</p>
-                <div class="hero-buttons">
-                    <button class="btn-primary">Coming Soon to App Store</button>
-ny ch ch c                </div>
+                <div class="simple-cta">
+                    <!-- Prominent CTA button linking to the App Store - tracks clicks via Google Analytics -->
+                    <a class="cta-button" href="https://apps.apple.com/us/app/lexa-ai-learn-languages/id6754065379" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Hero Section - Download App Store'});">Download on the App Store</a>
+              </div>
             </div>
             <div class="hero-image">
                 <img src="images/Simulator Screenshot - iPhone 15 Pro Max - 2025-10-17 at 21.46.54-min.png" alt="LexaLearn Conversation Screen" class="phone-mockup">
+            </div>
+        </div>
+    </section>
+
+    <!-- Secondary Download Section placed below How It Works -->
+    <section class="cta-download">
+        <div class="container">
+            <div class="simple-cta">
+                <!-- Prominent CTA button linking to the App Store (secondary location) - tracks clicks via Google Analytics -->
+                <a class="cta-button" href="https://apps.apple.com/us/app/lexa-ai-learn-languages/id6754065379" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Below Features - Download App Store'});">Download on the App Store</a>
             </div>
         </div>
     </section>
@@ -83,6 +105,32 @@ ny ch ch c                </div>
         </div>
     </section>
 
+    <!-- Social Proof Section -->
+    <section id="social-proof" class="social-proof">
+        <div class="container">
+            <h2 class="section-title">Why Speaking Works</h2>
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="proof-number">3x</div>
+                    <h3>Faster Learning</h3>
+                    <p>Research shows that learners who practice speaking progress 3x faster than those who only use reading and writing exercises.</p>
+                </div>
+                
+                <div class="proof-card">
+                    <div class="proof-number">85%</div>
+                    <h3>Better Retention</h3>
+                    <p>Speaking activates multiple areas of your brain simultaneously, leading to 85% better long-term memory retention compared to passive learning.</p>
+                </div>
+                
+                <div class="proof-card">
+                    <div class="proof-number">2x</div>
+                    <h3>More Confidence</h3>
+                    <p>Users who practice speaking with Lexa report feeling twice as confident in real-world conversations after just 2 weeks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -96,6 +144,7 @@ ny ch ch c                </div>
                     <h4>Product</h4>
                     <ul>
                         <li><a href="#features">Features</a></li>
+                        <li><a href="articles.html">Articles</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -113,7 +162,7 @@ ny ch ch c                </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 LexaLearn. All rights reserved.</p>
+                <p>&copy; 2025 Lexa AI. All rights reserved.</p>
             </div>
         </div>
     </footer>

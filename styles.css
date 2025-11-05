@@ -108,6 +108,53 @@ body {
     gap: 1rem;
 }
 
+/* Sizes the App Store badge in the hero CTA */
+.app-store-badge {
+    height: 32px; /* further reduce badge size */
+    width: auto;
+    display: block;
+}
+
+/* Simple text CTA styling */
+.simple-cta {
+    display: flex; /* centers the CTA container items */
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* High-visibility CTA button styling - large prominent button */
+.cta-button {
+    display: inline-block; /* allows button to be sized properly */
+    text-decoration: none; /* remove underline for button */
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: #ffffff;
+    padding: 1.25rem 2.5rem; /* larger padding for bigger button */
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1.25rem; /* larger font size */
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    border: none; /* ensure no border */
+}
+
+/* Hover/focus states for the CTA button */
+.cta-button:hover,
+.cta-button:focus {
+    transform: translateY(-3px); /* more pronounced lift on hover */
+    box-shadow: 0 16px 40px rgba(124, 58, 237, 0.5);
+    background: linear-gradient(135deg, #9a6df9 0%, #8448f0 100%);
+}
+
+/* Centers the secondary simple CTA under How It Works */
+.cta-download {
+    padding: 60px 0; /* adds padding around the secondary CTA section */
+    background-color: #0a0a0a;
+}
+
+.cta-download .simple-cta {
+    justify-content: center;
+}
+
 .btn-primary {
     background-color: #8b5cf6;
     color: #ffffff;
@@ -154,6 +201,12 @@ body {
 .features {
     padding: 80px 0;
     background-color: #0a0a0a;
+}
+
+/* Social Proof Section - stats showing why speaking helps */
+.social-proof {
+    padding: 80px 0;
+    background-color: #1a1a1a;
 }
 
 .section-title {
@@ -209,6 +262,53 @@ body {
     object-fit: contain;
     border-radius: 12px;
     border: 1px solid #2a2a2a;
+}
+
+/* Proof cards grid layout */
+.proof-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Individual proof card styling */
+.proof-card {
+    background-color: #0a0a0a;
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proof-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+}
+
+/* Large number display for proof stats */
+.proof-number {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.proof-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.proof-card p {
+    color: #a0a0a0;
+    line-height: 1.6;
+    font-size: 1rem;
 }
 
 /* Pricing Section */
@@ -376,7 +476,18 @@ body {
         flex-wrap: wrap;
     }
     
+    /* Ensures CTA button is properly sized on mobile */
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+    
     .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Proof grid responsive layout */
+    .proof-grid {
         grid-template-columns: 1fr;
     }
     
@@ -403,5 +514,20 @@ body {
     .btn-secondary {
         padding: 0.8rem 1.5rem;
         font-size: 1rem;
+    }
+    
+    /* CTA button sizing for very small screens */
+    .cta-button {
+        padding: 0.9rem 1.8rem;
+        font-size: 1rem;
+    }
+    
+    /* Proof number sizing on small screens */
+    .proof-number {
+        font-size: 3rem;
+    }
+    
+    .proof-card {
+        padding: 2rem;
     }
 }

@@ -1,0 +1,27 @@
+{
+  "name": "lexalearn-website",
+  "version": "1.0.0",
+  "description": "Automated article generation from Word documents",
+  "main": "auto-generate-articles.js",
+  "scripts": {
+    "generate": "node auto-generate-articles.js",
+    "rebuild-index": "node rebuild-articles-index.js",
+    "add-mobile-banner": "node add-mobile-banner.js",
+    "create-test": "node create-test-doc.js",
+    "start": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "test": "echo \"No tests yet\""
+  },
+  "keywords": ["seo", "articles", "automation"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mammoth": "^1.6.0",
+    "openai": "^4.20.1",
+    "dotenv": "^16.3.1",
+    "fs-extra": "^11.2.0",
+    "slugify": "^1.6.6"
+  }
+}
+

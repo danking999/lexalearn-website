@@ -1,0 +1,7 @@
+.vercel
+.DS_Store
+node_modules/
+.env
+word-documents/
+*.log
+package-lock.json
